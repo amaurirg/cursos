@@ -17,6 +17,7 @@ class Estudante(models.Model):
         self.slug = slugify(self.nome)
         super().save(*args, **kwargs)
 
+
 class Cursos(models.Model):
     titulo = models.CharField('Título', max_length=100)
     slug = models.SlugField('Slug', max_length=130, editable=False)
@@ -32,6 +33,7 @@ class Cursos(models.Model):
     def save(self, *args, **kwargs):
         self.slug = slugify(self.titulo)
         super().save(*args, **kwargs)
+
 
 class Avaliacoes(models.Model):
     estudante = models.ForeignKey(Estudante, related_name='avaliacoes', on_delete=models.CASCADE)
