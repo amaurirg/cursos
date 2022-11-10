@@ -1,2 +1,2 @@
 # cursos
-Projeto Django com relacionamentos no DB
+Projeto Django com relacionamentos no banco de dados
